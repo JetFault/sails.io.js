@@ -614,7 +614,7 @@ var io="undefined"==typeof module?{}:module.exports;(function(){(function(a,b){v
     io.sails = {
 
       // Whether to automatically connect a socket and save it as `io.socket`.
-      autoConnect: true,
+      autoConnect: SAILS_IO_AUTOCONNECT ? SAILS_IO_AUTOCONNECT : true, 
 
       // Whether to use JSONP to get a cookie for cross-origin requests
       useCORSRouteToGetCookie: true,
