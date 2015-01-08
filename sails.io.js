@@ -611,7 +611,7 @@
     io.sails = {
 
       // Whether to automatically connect a socket and save it as `io.socket`.
-      autoConnect: SAILS_IO_AUTOCONNECT ? SAILS_IO_AUTOCONNECT : true, 
+      autoConnect: typeof SAILS_IO_AUTOCONNECT === 'undefined' ? true : SAILS_IO_AUTOCONNECT, 
 
       // Whether to use JSONP to get a cookie for cross-origin requests
       useCORSRouteToGetCookie: true,
